@@ -1,0 +1,450 @@
+.home {
+  min-height: 100vh;
+  background: #0f172a;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
+
+.logo span {
+  color: #22c55e;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 30px;
+}
+
+.hero-content {
+  max-width: 950px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #22c55e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #22c55e;
+}
+
+.hero-description {
+  max-width: 680px;
+  margin: 0 auto 35px;
+  color: #94a3b8;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.calculate-button {
+  border: none;
+  border-radius: 10px;
+  background: #22c55e;
+  color: #052e16;
+  padding: 16px 26px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.macro-preview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 70px;
+}
+
+.macro-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px 20px;
+}
+
+.macro-card p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.macro-card h3 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.macro-card span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* Calculator */
+
+.calculator-section {
+  min-height: 100vh;
+  padding: 100px 30px;
+  background: #111827;
+}
+
+.calculator-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.calculator-heading h2 {
+  font-size: 44px;
+  margin-bottom: 12px;
+}
+
+.calculator-heading > p:last-child {
+  color: #94a3b8;
+  font-size: 17px;
+}
+
+.calculator-card {
+  max-width: 800px;
+  margin: 0 auto;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 20px;
+
+  padding: 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  background: #0f172a;
+  color: white;
+
+  border: 1px solid #475569;
+  border-radius: 9px;
+
+  padding: 13px 14px;
+
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #22c55e;
+}
+
+.form-group input::placeholder {
+  color: #64748b;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.height-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.height-inputs input {
+  min-width: 0;
+}
+
+.height-inputs span,
+.input-with-unit span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.input-with-unit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-with-unit input {
+  flex: 1;
+}
+
+.submit-calculator {
+  width: 100%;
+
+  margin-top: 35px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #22c55e;
+  color: #052e16;
+
+  font-weight: 700;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.submit-calculator:hover {
+  background: #4ade80;
+}
+
+.calculate-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Results */
+
+.results-section {
+  max-width: 1100px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.results-heading {
+  margin-bottom: 40px;
+}
+
+.results-heading h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.results-heading > p:last-child {
+  color: #94a3b8;
+  font-size: 17px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.result-card {
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 28px 20px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  border-color: #22c55e;
+}
+
+.result-card p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.result-card h3 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.result-card span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.highlight-card {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.highlight-card h3 {
+  color: #22c55e;
+}
+
+/* Calculator Mobile */
+
+@media (max-width: 700px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .results-heading h2 {
+    font-size: 34px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+  .calculator-card {
+    padding: 25px;
+  }
+
+  .calculator-heading h2 {
+    font-size: 36px;
+  }
+}
+
+/* Goal Progress Overview */
+
+.goal-summary {
+  margin-top: 30px;
+  padding: 30px;
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.goal-summary h3 {
+  color: #22c55e;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.goal-summary p {
+  color: #94a3b8;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.goal-summary strong {
+  color: white;
+}
+
+.goal-summary .goal-disclaimer {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+/* Macronutrient Breakdown Chart */
+
+.macro-chart-container {
+  margin-top: 35px;
+  padding: 35px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.macro-chart-container h3 {
+  color: #22c55e;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.macro-chart-container p {
+  color: #94a3b8;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Macro Percentage Breakdown */
+
+.macro-percentages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+.macro-percentage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.macro-percentage-item span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.macro-percentage-item strong {
+  font-size: 26px;
+  color: white;
+}
+
+/* Fiber */
+.fiber-summary {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.fiber-summary h4 {
+  color: #22c55e;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.fiber-summary p {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.fiber-summary span {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
