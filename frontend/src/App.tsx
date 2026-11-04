@@ -1,7 +1,26 @@
 import './App.css'
 import MacroCalculator from './components/MacroCalculator'
+import FoodTracker from './components/FoodTracker'
+import { useState } from 'react'
+import NutritionDashboard from './components/NutritionDashboard'
 
 function App() {
+  const [nutritionGoals, setNutritionGoals] = useState<{
+    calories: number
+    protein: number
+    carbs: number
+    fat: number
+    fiber: number
+  } | null>(null)
+
+  const [nutritionTotals, setNutritionTotals] = useState({
+    calories: 0,
+    protein: 0,
+    carbs: 0,
+    fat: 0,
+    fiber: 0,
+  })
+
   return (
     <main className="home">
       <nav className="navbar">
@@ -64,7 +83,17 @@ function App() {
           </div>
         </div>
       </section>
-      <MacroCalculator />
+      <MacroCalculator onCalculate={setNutritionGoals} />
+
+      <NutritionDashboard
+        goals={nutritionGoals}
+        totals={nutritionTotals}
+      />
+
+      <FoodTracker
+        goals={nutritionGoals}
+        onTotalsChange={setNutritionTotals}
+      />
     </main>
   )
 }

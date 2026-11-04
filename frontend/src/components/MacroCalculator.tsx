@@ -1,7 +1,19 @@
 import { useState } from 'react'
 import MacroChart from './MacroChart'
 
-function MacroCalculator() {
+type NutritionGoals = {
+  calories: number
+  protein: number
+  carbs: number
+  fat: number
+  fiber: number
+}
+
+type MacroCalculatorProps = {
+  onCalculate: (goals: NutritionGoals) => void
+}
+
+function MacroCalculator({ onCalculate }: MacroCalculatorProps) {
 
   const [age, setAge] = useState('')
   const [sex, setSex] = useState('')
@@ -141,6 +153,14 @@ function MacroCalculator() {
           bmiCategory,
           poundsToGoal,
           estimatedWeeks,
+        })
+
+        onCalculate({
+          calories: Math.round(targetCalories),
+          protein: Math.round(protein),
+          carbs: Math.max(0, Math.round(carbs)),
+          fat: Math.round(fat),
+          fiber: fiber,
         })
   }
 

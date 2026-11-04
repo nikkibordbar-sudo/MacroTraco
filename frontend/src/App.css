@@ -448,3 +448,398 @@
   font-size: 14px;
 }
 
+
+/* DAILY FOOD TRACKER */
+
+.food-tracker {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  color: #f8fafc;
+}
+
+.food-tracker h2 {
+  color: #22c55e;
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.food-tracker > p {
+  color: #94a3b8;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.food-tracker h3 {
+  color: #22c55e;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* FOOD INPUT FORM */
+
+.food-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.food-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  background: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.food-form input:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.food-form button {
+  padding: 14px 20px;
+  background: #22c55e;
+  border: none;
+  border-radius: 10px;
+  color: #0f172a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.food-form button:hover {
+  background: #16a34a;
+}
+
+/* DAILY NUTRITION TOTALS */
+
+.food-totals {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.food-totals p {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px 10px;
+  text-align: center;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* FOOD LOG */
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.food-item {
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.food-item strong {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+.food-item p {
+  color: #cbd5e1;
+  margin: 10px 0;
+}
+
+.food-item button {
+  background: #ef4444;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.food-item button:hover {
+  background: #dc2626;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .food-tracker {
+    margin: 30px 15px;
+    padding: 24px;
+  }
+
+  .food-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .food-totals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .food-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Daily Nutrition Progress */
+
+.nutrition-progress {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.nutrition-progress h3 {
+  color: #22c55e;
+  margin-bottom: 22px;
+}
+
+.progress-item {
+  margin-bottom: 20px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #0f172a;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.progress-calories {
+  background: #22c55e;
+}
+
+.progress-protein {
+  background: #38bdf8;
+}
+
+.progress-carbs {
+  background: #a78bfa;
+}
+
+.progress-fat {
+  background: #f59e0b;
+}
+
+.progress-fiber {
+  background: #14b8a6;
+}
+
+.progress-item p {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 6px;
+}
+
+
+/* Daily Food Tracker Date Selector */
+
+.food-date-selector {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.food-date-selector label {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.food-date-selector input {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color-scheme: dark;
+}
+
+.food-date-selector input:focus {
+  outline: 2px solid #22c55e;
+  outline-offset: 2px;
+}
+
+
+/* Meal Categories */
+
+.meal-select {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.meal-category {
+  margin-top: 25px;
+}
+
+.meal-category h4 {
+  color: #22c55e;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.empty-meal {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.food-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cancel-edit {
+  background-color: #64748b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.cancel-edit:hover {
+  background-color: #475569;
+}
+
+
+/* Nutrition Dashboard */
+
+.nutrition-dashboard {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+}
+
+.nutrition-dashboard h2 {
+  color: #22c55e;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.nutrition-dashboard > p {
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+.dashboard-goals {
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.dashboard-goals h3 {
+  color: #22c55e;
+  margin-bottom: 20px;
+}
+
+.dashboard-goals p {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+
+/* Nutrition Dashboard Progress Bars */
+
+.dashboard-progress {
+  margin: 22px 0;
+  text-align: left;
+}
+
+.dashboard-progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.dashboard-progress-track {
+  width: 100%;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dashboard-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.dashboard-progress-fill.calories {
+  background: #22c55e;
+}
+
+.dashboard-progress-fill.protein {
+  background: #38bdf8;
+}
+
+.dashboard-progress-fill.carbs {
+  background: #a78bfa;
+}
+
+.dashboard-progress-fill.fat {
+  background: #f59e0b;
+}
+
+.dashboard-progress-fill.fiber {
+  background: #14b8a6;
+}
+
+.dashboard-progress p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 6px;
+}
